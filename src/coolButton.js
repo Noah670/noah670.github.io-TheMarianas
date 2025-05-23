@@ -10,12 +10,24 @@ class coolButton extends React.Component {
 
     render() {
         if (this.state.liked) {
-            return 'You liked this.';
+            // Liked State: Disabled Materialize button with "check" icon and "Liked!" text
+            return e(
+                'button', { className: 'btn disabled', disabled: true }, [
+                    e('i', { className: 'material-icons left' }, 'check'),
+                    'Liked!'
+                ]
+            );
         }
 
+        // Active State (not liked yet): Materialize button with "thumb_up" icon and "Like" text
         return e(
-            'button', { onClick: () => this.setState({ liked: true }) },
-            'Like'
+            'button', {
+                className: 'btn waves-effect waves-light',
+                onClick: () => this.setState({ liked: true })
+            }, [
+                e('i', { className: 'material-icons left' }, 'thumb_up'),
+                'Like'
+            ]
         );
     }
 }

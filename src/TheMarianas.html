@@ -5,84 +5,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noah670</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Materialize CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Existing custom stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-    p {
-        text-align: center;
-    }
-    
-    .islands {
-        background-color: white;
-        color: black;
-        margin: 20px;
-        padding: 10px;
-        height: auto;
-    }
-    
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: blue;
-        color: white;
-        text-align: center;
-    }
-</style>
 
-<body style="background-color:rgb(0, 113, 188); font-family:Verdana">
+<body>
+    <div class="container">
 
-    <div style="text-align: center;">
+        <main>
 
-        <h1 style="color: black;"> &#127474;&#127477; Islands of the Marianas &#127474;&#127477;</h1>
+            <h1 class="center-align section"> &#127474;&#127477; Islands of the Marianas &#127474;&#127477;</h1>
 
+            <div class="row section">
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="responsive-img" src="img/Saipan_Garapan.jpg" alt="Saipan, Garapan">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Saipan &#127474;&#127477;</span>
+                            <p> Saipan is the largest of the Northern Mariana Islands and a U.S. Territory.<br>Escape to a place of magnificent beaches and crystal clear aqua waters, <br>rich history, year-round outdoor activities, world-class diving and golfing,<br> international
+                                shopping, a wide range of ethnic restaurants, and a wide <br> variety of international and indigenous cultures adding their unique flavors to <br> this island paradise.</p>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="islands">
-            <h2>Saipan &#127474;&#127477;</h2>
-            <p> Saipan is the largest of the Northern Mariana Islands and a U.S. Territory.<br>Escape to a place of magnificent beaches and crystal clear aqua waters, <br>rich history, year-round outdoor activities, world-class diving and golfing,<br> international
-                shopping, a wide range of ethnic restaurants, and a wide <br> variety of international and indigenous cultures adding their unique flavors to <br> this island paradise.</p>
-            <img src="img/Saipan_Garapan.jpg" alt="Saipan, Garapan" style="width: 600px; height:400px">
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="responsive-img" src="img/Tinian_taga.jpg" alt="Tinian taga beach">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Tinian &#127474;&#127477;</span>
+                            <p>Tinian is one of the three principal islands of the Commonwealth of the Northern Mariana Islands.<br> Tinian's largest village is San Jose and the eastern Taga Beach</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="responsive-img" src="img/rota_island.jpeg" alt="rota beach">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Rota &#127474;&#127477;</span>
+                            <p>Rota, also known as the "Friendly Island", is the southernmost island of the United States Commonwealth of the Northern Mariana Islands <br> and the second southernmost of the Marianas Archipelago.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row section"> {/* Added section class to this row as well for consistent spacing */}
+                <div class="col s12 m6 l4 offset-m3 offset-l4"> {/* Centering the Guam card for this example, or adjust grid */}
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="responsive-img" src="img/Guam_tumon.jpg" alt="Guam, Tumon bay">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Guam &#127468;&#127482;</span>
+                            <p>Guam is the largest and southernmost island in the Mariana Islands archipelago.<br> Guam is a territory of the United States and a strategic naval and military location.<br> Tumon is a popular destination for locals and tourists on Guam with
+                                many shops.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- React -->
+            <div id="coolButton_container" class="center-align section">
+                <!-- Content for coolButton will be injected here by React -->
+                <!-- Note: coolButton.js needs to be updated to render a Materialize styled button -->
+            </div>
+
+            <aside class="blog-link-section center-align section">
+                <a href="https://noah670.wordpress.com/" target="_blank">
+                    <img class="responsive-img" src="img/blog.gif" alt="Blog"> {/* Added responsive-img, removed width/height attributes */}
+                </a>
+            </aside>
+            
+            {/* Removed <br> tags, spacing should be handled by section classes or CSS margins */}
+
+        </main>
+    </div> {/* Close .container */}
+
+    <footer class="page-footer blue">
+        <div class="container">
+            <div class="row">
+                <div class="col l12 s12">
+                    <p class="center-align white-text">Noah670 ©2020</p>
+                </div>
+            </div>
         </div>
-
-        <div class="islands">
-            <h2>Tinian &#127474;&#127477;</h2>
-            <p>Tinian is one of the three principal islands of the Commonwealth of the Northern Mariana Islands.<br> Tinian's largest village is San Jose and the eastern Taga Beach</p>
-            <img src="img/Tinian_taga.jpg" alt="Tinian taga beach" style="width: 600px; height:400px">
+        <div class="footer-copyright">
+            <div class="container center-align">
+            Made with <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
         </div>
+    </footer>
 
-        <div class="islands">
-            <h2>Rota &#127474;&#127477;</h2>
-            <p>Rota, also known as the "Friendly Island", is the southernmost island of the United States Commonwealth of the Northern Mariana Islands <br> and the second southernmost of the Marianas Archipelago.</p>
-            <img src="img/rota_island.jpeg" alt="rota beach" style="width: 600px; height:400px">
-        </div>
+    <!-- Load React-->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
-        <div class="islands">
-            <h2>Guam &#127468;&#127482;</h2>
-            <p>Guam is the largest and southernmost island in the Mariana Islands archipelago.<br> Guam is a territory of the United States and a strategic naval and military location.<br> Tumon is a popular destination for locals and tourists on Guam with
-                many shops.</p>
-            <img src="img/Guam_tumon.jpg" alt="Guam, Tumon bay" style="height: 300px; width: 600px">
-        </div>
+    <!-- React component-->
+    <script src="coolButton.js"></script>
 
-        <!-- React -->
-        <div id="coolButton_container" style="color:red;">
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        // Initialize Materialize components
+        document.addEventListener('DOMContentLoaded', function() {
+            // M.AutoInit(); // Can be used to initialize all components
+            // Or initialize specific components if needed
+            var cards = document.querySelectorAll('.card');
+            // No specific JS needed for cards unless using features like reveal
 
-        </div>
-        <a href="https://noah670.wordpress.com/" target="_blank" ; style="color: black">
-            <img src="img/blog.gif" alt="Blog" width="200px" height="200px">
-        </a>
-        <br>
-        <br>
-        <div class="footer">
-            <p>Noah670 ©2020</p>
-        </div>
-
-        <!-- Load React-->
-        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-
-        <!-- React component-->
-        <script src="coolButton.js"></script>
-
+            // Initialize any other components here, e.g., modals, dropdowns, etc.
+        });
+    </script>
 </body>
 
 </html>

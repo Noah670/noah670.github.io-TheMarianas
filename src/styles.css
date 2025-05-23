@@ -1,0 +1,72 @@
+/* Body styles */
+body {
+    background-color: #f5f5f5; /* Light grey background */
+    /* font-family: Verdana, sans-serif; /* Removed, Materialize will provide font */
+}
+
+/* Main content container */
+main {
+    /* text-align: center; */ /* Commented out: Let Materialize components handle their own alignment */
+}
+
+/* Heading style */
+h1 {
+    color: black; /* Keep for now, can be overridden by Materialize classes or specific styling */
+}
+
+/* Centered text utility class */
+.centered-text {
+    text-align: center;
+}
+
+/* Island card styles (formerly .islands) */
+.island-card {
+    /* background-color: white; */ /* Handled by Materialize card */
+    /* color: black; */ /* Handled by Materialize card */
+    /* margin: 20px auto; */ /* Handled by Materialize card or layout classes */
+    /* padding: 10px; */ /* Handled by Materialize card */
+    /* height: auto; */ /* Handled by Materialize card content */
+    /* width: fit-content; */ /* Cards will likely be block or responsive width */
+}
+
+/* Images within island cards - these will likely be superseded by Materialize card image structure */
+.island-card img {
+    /* width: 600px; */ /* Will use responsive-img or card-image structure */
+    /* height: auto; */ 
+    /* display: block; */ /* Commented out: responsive-img and card structure handle this */
+    /* margin-left: auto; */ /* Commented out: responsive-img and card structure handle this */
+    /* margin-right: auto; */ /* Commented out: responsive-img and card structure handle this */
+}
+
+/* Footer styles (formerly .footer) */
+footer {
+    /* position: fixed; */ /* Materialize footer will have its own flow */
+    /* left: 0; */
+    /* bottom: 0; */
+    /* width: 100%; */
+    /* background-color: blue; */ /* Will use Materialize classes */
+    /* color: white; */ /* Will use Materialize classes */
+    /* text-align: center; */ /* Will use Materialize classes */
+    /* padding: 5px 0; */ /* Materialize footer has its own padding */
+}
+
+/* Blog link section */
+.blog-link-section {
+    /* margin-top: 20px; */ /* Replaced by 'section' class padding */
+    /* margin-bottom: 70px; */ /* Replaced by 'section' class padding */
+}
+
+.blog-link-section a {
+    color: black; /* Keep for now, can be overridden by Materialize if needed */
+}
+
+.blog-link-section img {
+    /* width: 200px; */ /* Commented out: Handled by responsive-img in HTML */
+    /* height: 200px; */ /* Commented out: Handled by responsive-img in HTML */
+}
+
+/* CoolButton container style */
+/* #coolButton_container { */
+    /* color: red; */ /* Removed: Ineffective as button styling dictates its own text color. */
+    /* margin-bottom: 20px; */ /* Replaced by 'section' class padding, as #coolButton_container has 'section' class */
+/* } */
