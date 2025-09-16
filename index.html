@@ -1,97 +1,398 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saipan Immersive Explorer | The Marianas</title>
+    <meta
+      name="description"
+      content="Explore Saipan in the Northern Mariana Islands through an interactive 3D map, landmark stories, and vivid island visuals inspired by material design."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noah670</title>
-</head>
-<style>
-    p {
-        text-align: center;
-    }
-    
-    .islands {
-        background-color: white;
-        color: black;
-        margin: 20px;
-        padding: 10px;
-        height: auto;
-        
-        max-width: 100%;
-        max-height: 100%;
-    }
-    
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: blue;
-        color: white;
-        text-align: center;
-    }
-    
-    
-    img {
-    max-width: 100%;
-    max-height: 100%;
-}
-</style>
-
-<body style="background-color:rgb(0, 113, 188); font-family:Verdana">
-
-    <div style="text-align: center;">
-
-        <h1 style="color: black;"> Islands of the Marianas &#127474;&#127477;</h1>
-
-
-        <div class="islands">
-            <h2>Saipan &#127474;&#127477;</h2>
-            <p> Saipan is the largest of the Northern Mariana Islands and a U.S. Territory.<br>Escape to a place of magnificent beaches and crystal clear aqua waters, <br>rich history, year-round outdoor activities, world-class diving and golfing,<br> international
-                shopping, a wide range of ethnic restaurants, and a wide <br> variety of international and indigenous cultures adding their unique flavors to <br> this island paradise.</p>
-            <img src="img/Saipan_Garapan.jpg" alt="Saipan, Garapan" style="width: 600px; height:400px">
+  <body>
+    <header class="hero">
+      <div class="top-app-bar">
+        <span class="brand">
+          <span class="material-icons-round" aria-hidden="true">explore</span>
+          The Marianas
+        </span>
+        <nav class="top-nav" aria-label="Main navigation">
+          <a href="#saipan-map">Saipan Map</a>
+          <a href="#landmarks">Landmarks</a>
+          <a href="#visuals">Visuals</a>
+        </nav>
+      </div>
+      <div class="hero-content">
+        <h1>Saipan immersive explorer</h1>
+        <p>
+          Glide across a stylized 3D map, tap luminous landmarks, and gather
+          inspiration for days filled with turquoise waters, flame trees, and
+          island culture.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#saipan-map">
+            <span class="material-icons-round" aria-hidden="true"
+              >travel_explore</span
+            >
+            Explore the 3D map
+          </a>
+          <a class="tonal-button" href="#landmarks">
+            <span class="material-icons-round" aria-hidden="true"
+              >local_florist</span
+            >
+            Find inspiration
+          </a>
         </div>
+      </div>
+      <div class="hero-illustration" aria-hidden="true">
+        <svg
+          viewBox="0 0 520 520"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <radialGradient
+              id="heroOcean"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(260 260) rotate(90) scale(260)"
+            >
+              <stop offset="0" stop-color="#31D6FF" stop-opacity="0.7" />
+              <stop offset="1" stop-color="#015476" />
+            </radialGradient>
+            <linearGradient
+              id="heroIsland"
+              x1="180"
+              y1="60"
+              x2="320"
+              y2="440"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#7EF1C2" />
+              <stop offset="1" stop-color="#0E8376" />
+            </linearGradient>
+            <linearGradient
+              id="heroHighlight"
+              x1="220"
+              y1="120"
+              x2="300"
+              y2="390"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FFFFFF" stop-opacity="0.75" />
+              <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <circle
+            cx="260"
+            cy="260"
+            r="240"
+            fill="url(#heroOcean)"
+            opacity="0.94"
+          />
+          <path
+            d="M270 80C312 110 344 172 336 240C328 302 298 350 276 392C258 424 246 456 248 496C252 544 270 590 274 638C280 694 260 752 222 792C190 826 148 838 110 820C76 804 56 768 64 728C70 696 90 660 108 624C126 588 136 550 126 510C112 454 84 392 94 332C104 256 140 184 186 122C206 94 230 78 254 72C260 70 264 74 270 80Z"
+            fill="url(#heroIsland)"
+          />
+          <path
+            d="M216 152C246 120 278 108 300 128C322 148 324 206 310 250C298 288 268 320 246 356C228 388 216 424 220 466C222 496 234 526 246 556"
+            stroke="url(#heroHighlight)"
+            stroke-width="26"
+            stroke-linecap="round"
+            opacity="0.65"
+          />
+          <g
+            stroke="#77F0FF"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-opacity="0.55"
+          >
+            <path
+              d="M120 210C164 180 228 160 276 166C324 172 366 206 398 242"
+            />
+            <path
+              d="M108 280C146 250 208 236 266 244C320 252 366 284 398 324"
+              opacity="0.6"
+            />
+            <path
+              d="M102 352C144 320 210 306 270 316C326 326 372 360 398 400"
+              opacity="0.38"
+            />
+          </g>
+        </svg>
+      </div>
+    </header>
 
-        <div class="islands">
-            <h2>Tinian &#127474;&#127477;</h2>
-            <p>Tinian is one of the three principal islands of the Commonwealth of the Northern Mariana Islands.<br> Tinian's largest village is San Jose and the eastern Taga Beach</p>
-            <img src="img/Tinian_taga.jpg" alt="Tinian taga beach" style="width: 600px; height:400px">
+    <main>
+      <section class="map-section" id="saipan-map">
+        <div class="section-heading">
+          <span class="overline">Interactive</span>
+          <h2>3D Saipan map & landmark stories</h2>
+          <p>
+            Pan across the island to uncover experiences from Garapan’s lively
+            boardwalk to Marpi’s dramatic cliffs and the flame tree-lined sweep
+            of Beach Road.
+          </p>
         </div>
-
-        <div class="islands">
-            <h2>Rota &#127474;&#127477;</h2>
-            <p>Rota, also known as the "Friendly Island", is the southernmost island of the United States Commonwealth of the Northern Mariana Islands <br> and the second southernmost of the Marianas Archipelago.</p>
-            <img src="img/rota_island.jpeg" alt="rota beach" style="width: 600px; height:400px">
+        <div class="map-layout">
+          <div class="map-wrapper">
+            <div class="map-card">
+              <svg
+                class="saipan-svg"
+                viewBox="0 0 400 900"
+                role="img"
+                aria-labelledby="saipan-map-title"
+              >
+                <title id="saipan-map-title">Stylized 3D map of Saipan</title>
+                <defs>
+                  <linearGradient
+                    id="islandGradient"
+                    x1="180"
+                    y1="30"
+                    x2="260"
+                    y2="870"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0" stop-color="#8CF9CB" />
+                    <stop offset="0.45" stop-color="#3BD0B5" />
+                    <stop offset="1" stop-color="#0B7F70" />
+                  </linearGradient>
+                </defs>
+                <path
+                  class="island-shape"
+                  d="M206 30C260 70 300 150 292 236C287 292 264 340 238 384C217 420 204 456 208 506C214 560 240 610 250 664C260 724 242 790 208 834C170 882 118 896 76 866C40 840 24 788 38 736C50 692 78 646 94 602C110 558 120 512 110 470C96 418 70 360 78 306C88 230 118 160 156 100C176 66 188 46 206 30Z"
+                  fill="url(#islandGradient)"
+                />
+                <path
+                  class="island-ridge"
+                  d="M202 120C240 160 260 200 248 256C236 304 196 344 182 384C168 424 170 462 188 504C208 552 242 598 238 652C234 702 200 756 160 780"
+                  opacity="0.5"
+                />
+                <path
+                  class="island-foam"
+                  d="M156 90C108 160 92 230 96 302C100 378 140 456 120 530C110 566 82 618 64 662"
+                />
+              </svg>
+            </div>
+          </div>
+          <article class="map-info-card" aria-live="polite">
+            <div class="map-info-header">
+              <span class="chip">
+                <span class="material-icons-round" aria-hidden="true"
+                  >assistant_navigation</span
+                >
+                Featured stop
+              </span>
+              <h3 id="landmark-title">Garapan</h3>
+              <p id="landmark-subtitle">Saipan's seaside cultural heart</p>
+            </div>
+            <div class="info-media">
+              <img
+                id="landmark-image"
+                src="img/Saipan_Garapan.jpg"
+                alt="Garapan boardwalk at sunset with the Saipan skyline in the distance"
+                loading="lazy"
+              />
+            </div>
+            <p id="landmark-description">
+              Garapan is the pulse of Saipan—home to the American Memorial Park,
+              museums that tell stories of resilience, and a waterfront dotted
+              with cafés and boutique shops. Grab a latte, rent a paddleboard,
+              or join a sunset cruise before the stars appear over the
+              Philippine Sea.
+            </p>
+            <div class="fact-chips" id="landmark-facts">
+              <span>American Memorial Park</span>
+              <span>Night markets &amp; cafés</span>
+              <span>Sunset boardwalks</span>
+            </div>
+            <div class="map-controls">
+              <button class="tonal-button" id="next-landmark" type="button">
+                Next stop
+                <span class="material-icons-round" aria-hidden="true"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+          </article>
         </div>
+        <div
+          class="landmark-chips"
+          id="landmark-chips"
+          role="tablist"
+          aria-label="Saipan highlights"
+        ></div>
+      </section>
 
-        <div class="islands">
-            <h2>Guam &#127468;&#127482;</h2>
-            <p>Guam is the largest and southernmost island in the Mariana Islands archipelago.<br> Guam is a territory of the United States and a strategic naval and military location.<br> Tumon is a popular destination for locals and tourists on Guam with
-                many shops.</p>
-            <img src="img/Guam_tumon.jpg" alt="Guam, Tumon bay" style="height: 300px; width: 600px">
+      <section class="landmark-cards" id="landmarks">
+        <div class="section-heading center">
+          <span class="overline">Itineraries</span>
+          <h2>Design your perfect day on Saipan</h2>
+          <p>
+            Mix culture, coastlines, and color: watch dawn from Marpi’s cliffs,
+            wander Garapan’s art-lined avenues, and toast the evening beneath
+            Beach Road’s flame tree canopy.
+          </p>
         </div>
+        <div class="card-grid" id="landmark-grid"></div>
+        <noscript>
+          <p class="noscript-message">
+            Enable JavaScript to experience the interactive map and dynamic
+            landmark stories.
+          </p>
+        </noscript>
+      </section>
 
-        <!-- React -->
-        <div id="coolButton_container" style="color:red;">
-
+      <section class="visuals" id="visuals">
+        <div class="section-heading center">
+          <span class="overline">Atmosphere</span>
+          <h2>Flame trees &amp; Marianas blues</h2>
+          <p>
+            Saipan’s palette stretches from fiery blossoms to endless lagoons.
+            These generative illustrations capture the mood of the island’s most
+            beloved scenes.
+          </p>
         </div>
-        <a href="https://noah670.wordpress.com/" target="_blank" ; style="color: black">
-            <img src="img/blog.gif" alt="Blog" width="200px" height="200px">
-        </a>
-        <br>
-        <br>
-        <div class="footer">
-            <p>Noah670 ©2020</p>
+        <div class="visual-grid">
+          <figure class="visual-card ocean">
+            <svg viewBox="0 0 400 320" aria-hidden="true">
+              <defs>
+                <linearGradient id="waveGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#3DD2FF" stop-opacity="0.8" />
+                  <stop offset="100%" stop-color="#013C71" stop-opacity="0.9" />
+                </linearGradient>
+              </defs>
+              <rect width="400" height="320" fill="url(#waveGradient)" />
+              <path
+                d="M0 210C60 190 120 220 180 210C240 200 300 160 360 170V320H0V210Z"
+                fill="rgba(255,255,255,0.18)"
+              />
+              <path
+                d="M0 240C60 230 120 250 180 240C240 230 300 200 360 208V320H0V240Z"
+                fill="rgba(255,255,255,0.24)"
+              />
+              <path
+                d="M0 268C60 260 120 272 180 268C240 264 300 244 360 248V320H0V268Z"
+                fill="rgba(255,255,255,0.32)"
+              />
+            </svg>
+            <div class="content">
+              <h3>Marianas water</h3>
+              <p>
+                Layers of sapphire and electric teal wrap the island, inviting
+                snorkelers, divers, and dreamers to drift above coral gardens.
+              </p>
+            </div>
+          </figure>
+          <figure class="visual-card flame-tree">
+            <svg viewBox="0 0 400 320" aria-hidden="true">
+              <defs>
+                <radialGradient id="flameGradient" cx="0.5" cy="0.35" r="0.6">
+                  <stop offset="0%" stop-color="#FFEEAA" stop-opacity="0.95" />
+                  <stop offset="50%" stop-color="#FF8F5B" stop-opacity="0.9" />
+                  <stop
+                    offset="100%"
+                    stop-color="#E23E2A"
+                    stop-opacity="0.95"
+                  />
+                </radialGradient>
+                <linearGradient id="trunkGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#4B2C16" />
+                  <stop offset="100%" stop-color="#2E1408" />
+                </linearGradient>
+              </defs>
+              <rect width="400" height="320" fill="url(#flameGradient)" />
+              <path
+                d="M188 320C188 280 184 230 180 210C176 190 170 174 174 152C178 130 194 112 210 110C226 108 242 120 248 134C254 148 252 166 250 184C246 222 246 260 246 320H188Z"
+                fill="url(#trunkGradient)"
+                opacity="0.85"
+              />
+              <g fill="#FFDB70" opacity="0.55">
+                <circle cx="168" cy="140" r="60" />
+                <circle cx="220" cy="120" r="54" />
+                <circle cx="262" cy="160" r="58" />
+                <circle cx="196" cy="176" r="50" />
+              </g>
+              <g fill="#FF6F3C" opacity="0.75">
+                <circle cx="170" cy="142" r="36" />
+                <circle cx="218" cy="124" r="42" />
+                <circle cx="260" cy="162" r="40" />
+                <circle cx="200" cy="182" r="34" />
+              </g>
+            </svg>
+            <div class="content">
+              <h3>Flame tree bloom</h3>
+              <p>
+                Saipan’s iconic palmyra and flame trees ignite Beach Road every
+                spring, shading evening strolls in brilliant orange light.
+              </p>
+            </div>
+          </figure>
+          <figure class="visual-card skyline">
+            <svg viewBox="0 0 400 320" aria-hidden="true">
+              <defs>
+                <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#3A1C71" />
+                  <stop offset="50%" stop-color="#D76D77" />
+                  <stop offset="100%" stop-color="#FFAF7B" />
+                </linearGradient>
+              </defs>
+              <rect width="400" height="320" fill="url(#skyGradient)" />
+              <g fill="rgba(255,255,255,0.65)">
+                <circle cx="80" cy="70" r="4" />
+                <circle cx="120" cy="110" r="3" />
+                <circle cx="200" cy="60" r="5" />
+                <circle cx="260" cy="98" r="4" />
+                <circle cx="320" cy="80" r="3" />
+              </g>
+              <path
+                d="M0 240C52 210 104 220 156 230C206 240 256 260 320 252C356 248 384 236 400 228V320H0V240Z"
+                fill="rgba(6, 17, 38, 0.9)"
+              />
+            </svg>
+            <div class="content">
+              <h3>Garapan evenings</h3>
+              <p>
+                Neon reflections shimmer across the harbor as live music and
+                open-air eateries fill the capital village with island rhythms.
+              </p>
+            </div>
+          </figure>
         </div>
+      </section>
+    </main>
 
-        <!-- Load React-->
-        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <footer>
+      <p>The Marianas ©2025</p>
+      <nav aria-label="Footer">
+        <a href="#saipan-map">Saipan Map</a>
+        <a href="#landmarks">Landmarks</a>
+        <a href="#visuals">Visuals</a>
+      </nav>
+      <p>
+        Crafted with material design inspiration for explorers of the Northern
+        Mariana Islands.
+      </p>
+    </footer>
 
-        <!-- React component-->
-        <script src="coolButton.js"></script>
+    <button class="fab" id="back-to-top" type="button" aria-label="Back to top">
+      <span class="material-icons-round" aria-hidden="true">north</span>
+    </button>
 
-</body>
-
+    <script src="src/app.js" defer></script>
+  </body>
 </html>
